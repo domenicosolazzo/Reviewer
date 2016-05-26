@@ -37,6 +37,7 @@ class Reviewer: UIView {
     private var topView: UIView?
 
     private var bottomView: UIView?
+    private var containerView: UIView?
 
     private var titleLabel: UILabel! = UILabel(frame: CGRectZero)
 
@@ -65,17 +66,15 @@ class Reviewer: UIView {
 
 
 
-    init(appId:String, topLayoutGuide: UILayoutSupport){
-
-        super.init(frame: CGRectZero)
-
-
-
+   convenience ainit(appId:String, topLayoutGuide: UILayoutSupport){
+	self.init(appId:appId)
         self.topLayoutGuide = topLayoutGuide
-
-
-
     }
+
+    init(appId){
+        super.init(frame: CGRectZero)
+    }
+
 
 
 
